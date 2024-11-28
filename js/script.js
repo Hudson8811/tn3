@@ -87,8 +87,8 @@ $(document).ready(function(){
 		pauseOnFocus: false,
 		pauseOnHover: false,
 		draggable: true,
-		prevArrow: "<div class='slarleft'><img src='img/ico_slid_arrl.svg'></div>",
-		nextArrow: "<div class='slarright'><img src='img/ico_slid_arrr.svg'></div>",
+		prevArrow: "<div class='slarleft'><img src='img/ico_slid_arrl_b.svg'></div>",
+		nextArrow: "<div class='slarright'><img src='img/ico_slid_arrr_b.svg'></div>",
 		responsive: [{
 			breakpoint: 768,
 			settings: {
@@ -139,4 +139,30 @@ $(document).ready(function(){
 			}
 		};
 	});
+
+	/* burger menu */
+
+	const burgerOpen = document.querySelector("[data-js=burgerOpen]")
+	const burgerMenu = document.querySelector("[data-js=burgerMenu]")
+
+	if(burgerOpen && burgerMenu) {
+		const burgerOverlay = document.querySelector("[data-name=burgerOverlay]")
+		const burgerCloses = document.querySelectorAll("[data-js=burgerClose]")
+
+		burgerOpen.addEventListener('click', () => {
+			burgerMenu.classList.add('active')
+			if(burgerOverlay) {
+				burgerOverlay.classList.add('active')
+			}
+		})
+
+		burgerCloses.forEach(burgerClose => {
+			burgerClose.addEventListener('click', () => {
+				burgerMenu.classList.remove('active')
+				if(burgerOverlay) {
+					burgerOverlay.classList.remove('active')
+				}
+			})
+		})
+	}
 })
