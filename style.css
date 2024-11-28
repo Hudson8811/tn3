@@ -2364,6 +2364,9 @@ a.result__picture-item:hover .result__picture-item--text {
 }
 
 @media (max-width: 600px) {
+	.tabs_list_item, .tabs_list_item.select{
+		background-size:100% 100%;
+	}
 	.block1 video{
 		position:absolute;
 		width:150%;
@@ -2438,7 +2441,6 @@ a.result__picture-item:hover .result__picture-item--text {
 
 	.tabs_list_item_img {
 		height: 200px;
-		padding-top: 20px;
 	}
 
 	.tabs_list_item_wrap {
@@ -2600,12 +2602,11 @@ a.result__picture-item:hover .result__picture-item--text {
 
 	.tabs_list_item_img {
 		height: 165px;
-		padding-top: 20px;
 	}
 
 	.tabs_list_item_descr {
-		font-size: 9px;
-		margin-top: 5px;
+		font-size: 12px;
+		margin-top: 0;
 	}
 
 	.block4_listing {
