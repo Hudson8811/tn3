@@ -138,6 +138,9 @@ img {
 	left: 0;
 	bottom: 0;
 	width: 100%;
+	min-height: 100%;
+	object-fit: cover;
+	object-position: bottom;
 }
 
 video {
@@ -2053,10 +2056,6 @@ a.result__picture-item:hover .result__picture-item--text {
 		margin-bottom: 30px;
 	}
 
-	.block1 video {
-		min-height: 400px
-	}
-
 	.block1_logo {
 		margin-right: 20px;
 	}
@@ -2163,10 +2162,6 @@ a.result__picture-item:hover .result__picture-item--text {
 @media (max-width: 768px) {
 	.block7 {
 		padding-bottom: 30px;
-	}
-
-	.block1 video {
-		min-height: 300px
 	}
 
 	.block1_wrap {
@@ -2402,13 +2397,6 @@ a.result__picture-item:hover .result__picture-item--text {
 		background-size: 100% 100%;
 	}
 
-	.block1 video {
-		position: absolute;
-		width: 150%;
-		left: -50%;
-		top: 0;
-	}
-
 	.block1_wrap {
 		position: relative;
 		top: 0;
@@ -2539,9 +2527,6 @@ a.result__picture-item:hover .result__picture-item--text {
 }
 
 @media (max-width: 480px) {
-	.block1 video {
-		width: 200%;
-	}
 
 	.block1_wrap {
 		padding: 20px 15px;
