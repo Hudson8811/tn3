@@ -587,7 +587,7 @@ video {
 }
 
 .listing_block_wrap {
-	padding: 50px 40px 10px;
+	padding: 50px 40px 0px;
 	display: flex;
 	position: relative;
 	justify-content: space-between;
@@ -770,7 +770,7 @@ ul.rbw_list li span {
 }
 
 .rbw_bot:before {
-	border-top: 1px solid #999;
+	border-top: 1px solid #c2c2c2;
 	position: absolute;
 	content: '';
 	display: block;
@@ -1779,6 +1779,11 @@ a.result__picture-item:hover .result__picture-item--text {
 	height: auto;
 	aspect-ratio: 1 / 0.5;
 	object-fit: cover;
+
+	@media (min-width: 1401px) {
+		position: relative;
+		margin-top: -10px;
+	}
 }
 
 .burger-open,
@@ -2723,7 +2728,7 @@ a.result__picture-item:hover .result__picture-item--text {
 	}
 
 	.lbw_bot_bt {
-		left: 20px;
+		left: 85px;
 	}
 
 	.block5 {
@@ -2786,5 +2791,12 @@ a.result__picture-item:hover .result__picture-item--text {
 	.job_item_wrap_text {
 		padding: 0 60px 0 60px;
 		font-size: 20px;
+	}
+}
+
+@media (max-width: 400px) {
+	.lbw_bot_bt {
+		left: auto;
+		right: 15px;
 	}
 }
