@@ -184,5 +184,8 @@ $(document).ready(function(){
 			})
 			this.removeEventListener('touchstart', videoStart);
 		});
+
+		let event = new Event("touchstart");
+		window.dispatchEvent(event);
 	}
 })
