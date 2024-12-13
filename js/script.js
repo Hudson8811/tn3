@@ -73,10 +73,14 @@ $(document).ready(function(){
 	});
 
 	$('#slider_job').on('beforeChange', function() {
-		$('.slider_job_item:not(.slick-active)').removeClass("aos-animate");
+		if(window.innerWidth > 480) {
+			$('.slider_job_item:not(.slick-active)').removeClass("aos-animate");
+		}
 	})
 	$('#slider_job').on('afterChange', function() {
-		$('.slider_job_item.slick-active').addClass("aos-animate");
+		if(window.innerWidth > 480) {
+			$('.slider_job_item.slick-active').addClass("aos-animate");
+		}
 	});
 	
 	$('.js-fabrication').slick({

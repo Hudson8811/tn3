@@ -956,15 +956,24 @@
 		</div>
 
 	</div>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+
+		})
+	</script>
 	<script src="js/aos.js"></script>
 	<script>
-		if (window.innerWidth > 480) {
+		document.addEventListener('DOMContentLoaded', function () {
+			if (window.innerWidth < 481) {
+				document.querySelectorAll(".slider_job_item[data-aos]").forEach(item => {
+					item.classList.add('aos-animate')
+					/*item.removeAttribute('data-aos')
+					item.removeAttribute('data-aos-duration')
+					item.removeAttribute('data-aos-delay')*/
+				})
+			}
 			AOS.init();
-		} else {
-			document.querySelectorAll("[data-aos]").forEach(item => {
-				item.removeAttribute('data-aos')
-			})
-		}
+		})
 	</script>
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<script src="js/jquery.fancybox.min.js"></script>
