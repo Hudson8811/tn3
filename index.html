@@ -958,7 +958,13 @@
 	</div>
 	<script src="js/aos.js"></script>
 	<script>
-		AOS.init();
+		if (window.innerWidth > 480) {
+			AOS.init();
+		} else {
+			document.querySelectorAll("[data-aos]").forEach(item => {
+				item.removeAttribute('data-aos')
+			})
+		}
 	</script>
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<script src="js/jquery.fancybox.min.js"></script>
