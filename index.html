@@ -134,7 +134,8 @@
 		<div id="block4" class="block4">
 			<div class="block4_prods" data-aos="fade-up" data-aos-duration="800">
 				<div class="block4_tabs">
-					<div class="block4_tabs_list">
+					<div class="block4_tabs_list" data-js="tabsSlider">
+
 						<div class="tabs_list_item_wrap">
 							<div class="tabs_list_item select" data-tab="t1">
 								<div class="tabs_list_item_img"><img src="img/tab_gv1.png"></div>
@@ -159,6 +160,7 @@
 								<div class="tabs_list_item_descr">Экспресс <br>декор</div>
 							</div>
 						</div>
+
 					</div>
 				</div>
 				<div class="block4_listing">
@@ -967,9 +969,6 @@
 			if (window.innerWidth < 481) {
 				document.querySelectorAll(".slider_job_item[data-aos]").forEach(item => {
 					item.classList.add('aos-animate')
-					/*item.removeAttribute('data-aos')
-					item.removeAttribute('data-aos-duration')
-					item.removeAttribute('data-aos-delay')*/
 				})
 			}
 			AOS.init();

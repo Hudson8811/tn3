@@ -82,6 +82,35 @@ $(document).ready(function(){
 			$('.slider_job_item.slick-active').addClass("aos-animate");
 		}
 	});
+
+
+	if(window.innerWidth < 800) {
+		$('[data-js="tabsSlider"]').slick({
+			infinite: false,
+			speed: 500,
+			autoplay: false,
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			fade: false,
+			cssEase: 'linear',
+			dots: false,
+			centerMode: false,
+			focusOnSelect: false,
+			pauseOnFocus: false,
+			pauseOnHover: false,
+			draggable: true,
+			prevArrow: "<div class='slarleft'><img src='img/ico_slid_arrl.svg'></div>",
+			nextArrow: "<div class='slarright'><img src='img/ico_slid_arrr.svg'></div>",
+			responsive: [{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+				}}
+			]
+		});
+	}
+
 	
 	$('.js-fabrication').slick({
 		infinite: true,
